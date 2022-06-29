@@ -1,0 +1,68 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "react-native",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx", ".json", ".native.js", ".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "no-use-before-define": ["error", { "variables": false }],
+    "react/prop-types": [
+      "error",
+      { "ignore": ["navigation", "navigation.navigate"] }
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": "error",
+    "camelcase": "off",
+    "no-unused-expressions": "off",
+    "no-param-reassign": 0,
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-no-bind": "off"
+  }
+}
